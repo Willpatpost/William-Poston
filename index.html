@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Patric Poston - Personal Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            color: #333;
+        }
+        .projects, .resume {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .project, .resume-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 20px;
+            width: calc(33% - 40px);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>William Patric Poston</h1>
+    <p>Senior at Old Dominion University - Computer Science Major, Data Science Minor</p>
+</header>
+
+<nav>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+</nav>
+
+<div class="container">
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>     Hello! My name is William Patric Poston. I am a student at Old Dominion University in Norfolk, Virginia. I am majoring in computer science and minoring in data science. I am passionate about programming and technology. I am currently exploring various fields within the computer science industry to determine which path I want to pursue. <br>A few facts about me:
+<br>-I love to hike
+<br>-I am a Christian
+<br>-I took 5 classes of Spanish in high school
+<br>-I am colorblind</p>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>Description of Project 1...</p>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>Description of Project 2...</p>
+            </div>
+            <div class="project">
+                <h3>Project 3</h3>
+                <p>Description of Project 3...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume" class="section">
+        <h2>Resume</h2>
+        <div class="resume">
+            <div class="resume-item">
+                <h3>Education</h3>
+                <p>Old Dominion University, B.Sc. in Computer Science, Minor in Data Science</p>
+            </div>
+            <div class="resume-item">
+                <h3>Experience</h3>
+                <p>Details about professional or academic experiences...</p>
+            </div>
+            <div class="resume-item">
+                <h3>Skills</h3>
+                <p>List of skills...</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 William Patric Poston</p>
+</footer>
+
+<script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
