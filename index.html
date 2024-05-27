@@ -10,19 +10,19 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f0f2f5;
+            color: #333;
         }
         header {
-            background-image: url('path-to-your-hero-image.jpg');
-            background-size: cover;
-            color: #fff;
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
             text-align: center;
-            padding: 100px 0;
         }
         nav {
             display: flex;
             justify-content: center;
-            background-color: #444;
+            background-color: #333;
         }
         nav a {
             color: #fff;
@@ -41,6 +41,8 @@
         }
         .section h2 {
             color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
         }
         .projects, .resume {
             display: flex;
@@ -53,6 +55,7 @@
             margin: 10px;
             padding: 20px;
             width: calc(33% - 40px);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         .project img {
             width: 100%;
@@ -64,9 +67,18 @@
             color: #fff;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+        }
+        .skills-list {
+            list-style: none;
+            padding: 0;
+        }
+        .skills-list li {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 3px;
+            display: inline-block;
         }
     </style>
 </head>
@@ -87,7 +99,7 @@
 <div class="container">
     <section id="about" class="section">
         <h2>About Me</h2>
-        <img src="https://github.com/Willpatpost/William-Poston/blob/main/Senior%20Picture.JPG?raw=true" alt="William Patric Poston's Headshot" style="width:150px; border-radius:50%;">
+        <img src="https://github.com/Willpatpost/William-Poston/blob/main/Senior%20Picture.JPG?raw=true" alt="William Patric Poston's Headshot" style="width:150px; border-radius:50%; margin-bottom:20px;">
         <p>Hello! My name is William Patric Poston. I am a student at Old Dominion University in Norfolk, Virginia. I am majoring in computer science and minoring in data science. I am passionate about programming and technology. I am currently exploring various fields within the computer science industry to determine which path I want to pursue.</p>
         <p>A few facts about me:</p>
         <ul>
@@ -102,11 +114,12 @@
         <h2>Projects</h2>
         <div class="projects">
             <div class="project">
-                <h3>Project 1</h3>
-                <img src="images/project1-screenshot.jpg" alt="Project 1 Screenshot">
-                <p>My first personal project came in the form of a sliding puzzle game. A sliding puzzle involves a square filled with a perfect-square-minus-one number of tiles. 
-                    <br>The goal is to move each tile into its correct position- in this case, ascending order from left-to-right and top-to-bottom.</p>
-                <a href="https://github.com/your-repo" target="_blank">View Source</a>
+                <h3>Sliding Puzzle Game</h3>
+                <img src="https://github.com/Willpatpost/Willpatpost/blob/main/Projects/Sliding%20Puzzle/Sliding%20Puzzle%20Screenshot.png?raw=true" alt="Sliding Puzzle Game Screenshot">
+                <p>My first personal project is a sliding puzzle game. The goal is to move each tile into its correct position in ascending order from left-to-right and top-to-bottom.</p>
+                <a href="https://github.com/Willpatpost/Willpatpost/tree/9f04d8f0ee7982aa240747a13a7ec448ce8fc939/Projects/Sliding%20Puzzle" target="_blank">View Source</a>
+                <br>
+                <a href="https://github.com/Willpatpost/Willpatpost/blob/9e1fe34099a7f490334fa6e0d8902ea024467630/Projects/Sliding%20Puzzle/Playable%20Sliding%20Puzzle%20Game.jar" target="_blank">Play</a>
             </div>
             <div class="project">
                 <h3>Project 2</h3>
@@ -123,30 +136,42 @@
         </div>
     </section>
 
-    <section id="resume" class="section">
-        <h2>Resume</h2>
-        <div class="resume">
-            <div class="resume-item">
-                <h3>Education</h3>
-                <p>Old Dominion University, B.Sc. in Computer Science, Minor in Data Science</p>
-            </div>
-            <div class="resume-item">
-                <h3>Experience</h3>
-                <p>Details about professional or academic experiences...</p>
-            </div>
-            <div class="resume-item">
-                <h3>Skills</h3>
-                <p>List of skills...</p>
-            </div>
+<section id="resume" class="section">
+    <h2>Resume</h2>
+    <div class="resume">
+        <div class="resume-item">
+            <h3>Education</h3>
+            <p>Old Dominion University, B.Sc. in Computer Science, Minor in Data Science</p>
         </div>
-        <iframe src="your-resume-url.pdf" width="100%" height="500px" style="border: none;"></iframe>
-    </section>
+        <div class="resume-item">
+            <h3>Experience</h3>
+            <p>Details about professional or academic experiences...</p>
+        </div>
+        <div class="resume-item">
+            <h3>Skills</h3>
+            <ul class="skills-list">
+                <li>Java</li>
+                <li>Python</li>
+                <li>C++</li>
+                <li>JavaScript</li>
+                <li>HTML & CSS</li>
+                <li>SQL</li>
+                <li>Data Analysis</li>
+                <li>Machine Learning</li>
+                <li>Git & GitHub</li>
+                <li>Problem Solving</li>
+            </ul>
+        </div>
+    </div>
+    <p>You can view my resume <a href="https://github.com/Willpatpost/Willpatpost/blob/dbf1303492b359898787f3448d01c385b5b2799d/Resume/Current%20Resume/William%20Poston%20Resume.pdf" target="_blank">here</a>.</p>
+</section>
+
 
     <section id="contact" class="section">
         <h2>Contact</h2>
         <p>If you'd like to get in touch, feel free to reach out via email or connect with me on LinkedIn.</p>
-        <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/your-profile" target="_blank">Your LinkedIn Profile</a></p>
+        <p>Email: <a href="mailto:willpatpost@gmail.com">your-email@example.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/william-poston" target="_blank">Your LinkedIn Profile</a></p>
     </section>
 </div>
 
