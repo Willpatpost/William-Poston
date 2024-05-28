@@ -77,22 +77,61 @@ nav button:hover {
     border-radius: 5px;
 }
 
+.project {
+    margin-bottom: 40px;
+}
+
+.project-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.project-images img {
+    width: 45%;
+    border-radius: 10px;
+}
+
 .project-links button,
 .project-links a {
-    background-color: #ff6347;
     border: none;
     color: white;
     padding: 10px 20px;
     cursor: pointer;
-    margin: 0 5px;
+    margin: 5px;
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s;
+    display: inline-block;
+    text-align: center;
 }
 
-.project-links button:hover,
-.project-links a:hover {
-    background-color: #ff4500;
+.project-links .play-button {
+    background-color: #1e90ff;
+}
+
+.project-links .play-button:hover {
+    background-color: #1c86ee;
+}
+
+.project-links .btn {
+    background-color: #32cd32;
+}
+
+.project-links .btn:hover {
+    background-color: #2eb82e;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #puzzleContainer {
@@ -174,17 +213,12 @@ label, select, button {
 }
 
 button {
-    background-color: #ff6347;
     border: none;
     color: white;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #ff4500;
 }
 
 #gameStats {
@@ -197,4 +231,26 @@ button:hover {
     margin-top: 20px;
     font-size: 20px;
     color: green;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav button {
+        padding: 10px;
+        margin: 2px;
+    }
+
+    .profile-pic {
+        width: 150px;
+    }
+
+    .project-images img {
+        width: 100%;
+    }
+
+    .project-links button,
+    .project-links a {
+        padding: 10px;
+        margin: 2px;
+    }
 }
