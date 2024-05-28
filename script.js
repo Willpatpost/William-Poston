@@ -1,5 +1,9 @@
 let size, puzzle, timer, moveCounter, time, moves, interval;
 
+document.addEventListener("DOMContentLoaded", function() {
+    openSection('about'); // Automatically open the About section on load
+});
+
 function openSection(sectionId) {
     var sections = document.querySelectorAll('.section');
     sections.forEach(function(section) {
@@ -9,7 +13,12 @@ function openSection(sectionId) {
 }
 
 function openSlidingPuzzle() {
-    document.getElementById('slidingPuzzle').style.display = 'block';
+    document.getElementById('popup').style.display = 'block';
+}
+
+function closeSlidingPuzzle() {
+    document.getElementById('popup').style.display = 'none';
+    clearInterval(interval); // Stop the timer when the popup is closed
 }
 
 function startGame() {
