@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const puzzleGrid = document.getElementById("puzzleGrid");
     const moveCounter = document.getElementById("moveCounter");
     const timerLabel = document.getElementById("timer");
+    const playButton = document.getElementById("playButton");
+    const gameModal = document.getElementById("gameModal");
+    const closeButton = document.querySelector(".close");
 
     let puzzleSize;
     let puzzle;
@@ -11,6 +14,20 @@ document.addEventListener("DOMContentLoaded", () => {
     let moveCount;
     let timer;
     let startTime;
+
+    playButton.addEventListener("click", () => {
+        gameModal.style.display = "block";
+    });
+
+    closeButton.addEventListener("click", () => {
+        gameModal.style.display = "none";
+    });
+
+    window.addEventListener("click", (event) => {
+        if (event.target === gameModal) {
+            gameModal.style.display = "none";
+        }
+    });
 
     startButton.addEventListener("click", startGame);
 
