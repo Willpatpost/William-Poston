@@ -117,3 +117,31 @@ document.addEventListener("DOMContentLoaded", () => {
         return puzzle.slice(0, -1).every((num, i) => num === i + 1);
     }
 });
+
+// Highlight active link in navigation
+document.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+    sections.forEach(section => {
+        if (
+            scrollPosition >= section.offsetTop - section.offsetHeight * 0.25 &&
+            scrollPosition < section.offsetTop + section.offsetHeight - section.offsetHeight * 0.25
+        ) {
+            const currentId = section.attributes.id.value;
+            removeActiveClasses();
+            addActiveClass(currentId);
+        }
+    });
+});
+
+const removeActiveClasses = () => {
+    document.querySelectorAll('nav a').forEach(el => {
+        el.classList.remove('active');
+    });
+};
+
+const addActiveClass = id => {
+    const selector = `nav a[href="#${id}"]`;
+    document.querySelector(selector).classList.add('active');
+};
