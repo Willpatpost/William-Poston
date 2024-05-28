@@ -44,6 +44,40 @@ nav a:hover {
     padding-bottom: 10px;
 }
 
+/* Ensure your existing styles remain intact, and add these new ones */
+.project-images {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.project-images img {
+    width: 48%;
+}
+
+.project-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-links a,
+.project-links button {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.project-links button {
+    background-color: #008CBA;
+}
+
 .projects, .resume {
     display: flex;
     flex-wrap: wrap;
