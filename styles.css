@@ -109,6 +109,13 @@ footer {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    border: 1px solid #333;
+    background-color: #fff;
+    user-select: none;
+}
+
+.puzzle-button:hover {
+    background-color: #f0f0f0;
 }
 
 #status {
