@@ -6,6 +6,7 @@
     <title>William Patric Poston - Personal Webpage</title>
     <meta name="description" content="Personal webpage of William Patric Poston, showcasing projects, resume, and contact information.">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -24,7 +25,7 @@
 <div class="container">
     <section id="about" class="section">
         <h2>About Me</h2>
-        <img src="https://github.com/Willpatpost/William-Poston/blob/main/Senior%20Picture.JPG?raw=true" alt="William Patric Poston's Headshot" style="width:150px; border-radius:50%; margin-bottom:20px;">
+        <img src="https://github.com/Willpatpost/William-Poston/blob/main/Senior%20Picture.JPG?raw=true" alt="William Patric Poston's Headshot" class="profile-pic">
         <p>Hello! My name is William Patric Poston. I am a student at Old Dominion University in Norfolk, Virginia. I am majoring in computer science and minoring in data science. I am passionate about programming and technology. I am currently exploring various fields within the computer science industry to determine which path I want to pursue.</p>
         <p>A few facts about me:</p>
         <ul>
@@ -46,9 +47,9 @@
                 </div>
                 <p>My first personal project is a sliding puzzle game. The goal is to move each tile into its correct position in ascending order from left-to-right and top-to-bottom. This project helped me improve my problem-solving skills and learn more about Java Swing for GUI development.</p>
                 <div class="project-links">
-                    <a href="https://github.com/Willpatpost/William-Poston/tree/main/Projects/Sliding%20Puzzle/Code/Main" target="_blank">View Source</a>
-                    <button id="playButton">Play</button>
-                    <a href="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Sliding%20Puzzle.jar" target="_blank">Download JAR File</a>
+                    <a class="btn btn-primary" href="https://github.com/Willpatpost/William-Poston/tree/main/Projects/Sliding%20Puzzle/Code/Main" target="_blank">View Source</a>
+                    <button class="btn btn-secondary" id="playButton">Play</button>
+                    <a class="btn btn-primary" href="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Sliding%20Puzzle.jar" target="_blank">Download JAR File</a>
                 </div>
             </div>
             <div class="project">
@@ -68,7 +69,6 @@
 
     <section id="puzzleGame" class="section">
         <h2>Play Sliding Puzzle Game</h2>
-        <button id="playButton">Play</button>
         <div id="gameModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
@@ -139,16 +139,6 @@
 </footer>
 
 <script src="script.js"></script>
-<script>
-    document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-</script>
 
 </body>
 </html>
