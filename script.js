@@ -98,12 +98,23 @@ document.addEventListener("DOMContentLoaded", () => {
             buttons[index].textContent = "";
             moveCount++;
             moveCounter.textContent = `Moves: ${moveCount}`;
+            updateTileColors();
             if (isPuzzleSolved()) {
                 clearInterval(timer);
-                buttons.forEach(button => button.style.backgroundColor = "yellow");
+                buttons.forEach(button => button.style.backgroundColor = "gold");
                 alert("Congratulations! You solved the puzzle!");
             }
         }
+    }
+
+    function updateTileColors() {
+        puzzle.forEach((num, index) => {
+            if (num !== 0 && num === index + 1) {
+                buttons[index].style.backgroundColor = "lightgreen";
+            } else {
+                buttons[index].style.backgroundColor = "white";
+            }
+        });
     }
 
     function updateTimer() {
