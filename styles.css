@@ -1,201 +1,44 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5;
-    color: #333;
 }
 
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #333;
+.sticky-bar {
     position: sticky;
     top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #ddd;
-}
-
-nav a {
-    color: #fff;
-    padding: 14px 20px;
-    text-decoration: none;
+    background-color: #333;
+    color: white;
     text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
 }
 
-nav a:hover, nav a.active {
+.sticky-bar button {
+    background-color: #444;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.sticky-bar button:hover {
     background-color: #555;
-    font-weight: bold;
-    border-bottom: 2px solid #4CAF50;
-}
-
-.container {
-    padding: 20px;
 }
 
 .section {
-    margin-bottom: 40px;
-}
-
-.section h2 {
-    color: #333;
-    border-bottom: 2px solid #4CAF50;
-    padding-bottom: 10px;
-}
-
-.profile-pic {
-    width: 150px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-}
-
-.project-images {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-}
-
-.project-images img {
-    width: 48%;
-    transition: transform 0.3s ease;
-}
-
-.project-images img:hover {
-    transform: scale(1.05);
-}
-
-.project-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-}
-
-.btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-}
-
-.btn-primary {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.btn-secondary {
-    background-color: #008CBA;
-    color: white;
-}
-
-.projects, .resume {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.project, .resume-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 10px;
     padding: 20px;
-    width: calc(33% - 40px);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
+    display: none;
 }
 
-.project:hover, .resume-item:hover {
-    transform: scale(1.05);
+.section:target {
+    display: block;
 }
 
-.project img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
-
-.skills-list {
-    list-style: none;
-    padding: 0;
-}
-
-.skills-list li {
-    background-color: #4CAF50;
-    color: white;
-    padding: 8px;
-    margin: 5px 0;
-    border-radius: 3px;
-    display: inline-block;
-}
-
-/* Puzzle Game Styles */
-#gameContainer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.menu {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#puzzleGrid {
-    display: grid;
-    gap: 5px;
-}
-
-.puzzle-button {
-    width: 80px;
-    height: 80px;
+h2 {
     font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border: 1px solid #333;
-    background-color: #fff;
-    user-select: none;
 }
 
-.puzzle-button:hover {
-    background-color: #f0f0f0;
-}
-
-#status {
-    margin-top: 10px;
-}
-
-@media (max-width: 768px) {
-    .project, .resume-item {
-        width: calc(50% - 20px);
-    }
-}
-
-@media (max-width: 480px) {
-    .project, .resume-item {
-        width: 100%;
-    }
+p {
+    font-size: 18px;
 }
