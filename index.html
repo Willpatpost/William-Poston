@@ -27,8 +27,17 @@
     <div id="projects" class="section" style="display:none;">
         <h2>Projects</h2>
         <button onclick="openSlidingPuzzle()">Play Sliding Puzzle Game</button>
-        <div id="slidingPuzzle" style="display:none;">
-            <h3>Sliding Puzzle Game</h3>
+    </div>
+    
+    <div id="contact" class="section" style="display:none;">
+        <h2>Contact</h2>
+        <p>Get in touch with me through the following channels.</p>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeSlidingPuzzle()">&times;</span>
+            <h2>Sliding Puzzle Game by William Poston</h2>
             <label for="size">Select Puzzle Size:</label>
             <select id="size">
                 <option value="3">3x3</option>
@@ -47,12 +56,6 @@
         </div>
     </div>
     
-    <div id="contact" class="section" style="display:none;">
-        <h2>Contact</h2>
-        <p>Get in touch with me through the following channels.</p>
-    </div>
-    
-    <script src="scripts.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
