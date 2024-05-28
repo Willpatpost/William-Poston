@@ -187,20 +187,38 @@
     </section>
 </div>
 
-<footer>
-    <p>&copy; 2024 William Patric Poston</p>
-</footer>
+<section id="puzzleGame" class="section">
+        <h2>Play Sliding Puzzle Game</h2>
+        <div class="menu">
+            <label for="sizeSelector">Select Puzzle Size:</label>
+            <select id="sizeSelector">
+                <option value="3">3x3</option>
+                <option value="4" selected>4x4</option>
+                <option value="5">5x5</option>
+            </select>
+            <button id="startButton">Start Game</button>
+            <div id="status">
+                <span id="moveCounter">Moves: 0</span>
+                <span id="timer">Time: 00:00</span>
+            </div>
+        </div>
+        <div id="puzzleGrid"></div>
+    </section>
 
-<script>
-    document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+    <footer>
+        <p>&copy; 2024 William Patric Poston</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-    });
-</script>
-
+    </script>
 </body>
 </html>
