@@ -41,12 +41,32 @@ body {
     display: block;
 }
 
-h2, h3 {
+h1, h2, h3 {
     font-size: 24px;
+    color: #333;
 }
 
-p {
+p, ul {
     font-size: 18px;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.headshot {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #puzzleContainer {
