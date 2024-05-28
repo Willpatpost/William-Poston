@@ -26,15 +26,22 @@ function startGame() {
     puzzle = generatePuzzle(size);
     time = 0;
     moves = 0;
-    document.getElementById('timer').textContent = time;
+    updateTimerDisplay();
     document.getElementById('moveCounter').textContent = moves;
     document.getElementById('congratulationsMessage').style.display = 'none';
     clearInterval(interval);
     interval = setInterval(() => {
         time++;
-        document.getElementById('timer').textContent = time;
+        updateTimerDisplay();
     }, 1000);
     renderPuzzle();
+}
+
+function updateTimerDisplay() {
+    const hours = Math.floor(time / 3600).toString().padStart(2, '0');
+    const minutes = Math.floor((time % 3600) / 60).toString().padStart(2, '0');
+    const seconds = (time % 60).toString().padStart(2, '0');
+    document.getElementById('timer').textContent = `${hours}:${minutes}:${seconds}`;
 }
 
 function generatePuzzle(size) {
