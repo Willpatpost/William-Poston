@@ -3,107 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>William Patric Poston - Personal Webpage</title>
-    <meta name="description" content="Personal webpage of William Patric Poston, showcasing projects, resume, and contact information.">
+    <title>William Patric Poston's Webpage</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<header>
-    <h1>William Patric Poston</h1>
-    <p>Senior at Old Dominion University - Computer Science Major, Data Science Minor</p>
-</header>
-
-<nav>
-    <a href="#about">About Me</a>
-    <a href="#projects">Projects</a>
-    <a href="#resume">Resume</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<div class="container">
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <img src="https://github.com/Willpatpost/William-Poston/blob/main/Senior%20Picture.JPG?raw=true" alt="William Patric Poston's Headshot" class="profile-pic">
-        <p>Hello! My name is William Patric Poston. I am a student at Old Dominion University in Norfolk, Virginia. I am majoring in computer science and minoring in data science. I am passionate about programming and technology. I am currently exploring various fields within the computer science industry to determine which path I want to pursue.</p>
-        <p>A few facts about me:</p>
-        <ul>
-            <li>I love to hike</li>
-            <li>I am a Christian</li>
-            <li>I took 5 classes of Spanish in high school</li>
-            <li>I am colorblind</li>
-        </ul>
-    </section>
-
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <div class="projects">
-            <div class="project">
-                <h3>Sliding Puzzle Game</h3>
-                <div class="project-images">
-                    <img src="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Demo%20of%20Sliding%20Puzzle%20Uncompleted.png?raw=true" alt="Sliding Puzzle Game Screenshot">
-                    <img src="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Demo%20of%20Sliding%20Puzzle%20Completed.png?raw=true" alt="Sliding Puzzle Game Screenshot">
-                </div>
-                <p>My first personal project is a sliding puzzle game. The goal is to move each tile into its correct position in ascending order from left-to-right and top-to-bottom. This project helped me improve my problem-solving skills and learn more about Java Swing for GUI development.</p>
-                <div class="project-links">
-                    <a class="btn btn-primary" href="https://github.com/Willpatpost/William-Poston/tree/main/Projects/Sliding%20Puzzle/Code/Main" target="_blank">View Source</a>
-                    <button class="btn btn-secondary" id="playButton">Play</button>
-                    <a class="btn btn-primary" href="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Sliding%20Puzzle.jar" target="_blank">Download JAR File</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="resume" class="section">
+    <div class="sticky-bar">
+        <button onclick="openSection('about')">About</button>
+        <button onclick="openSection('resume')">Resume</button>
+        <button onclick="openSection('projects')">Projects</button>
+        <button onclick="openSection('contact')">Contact</button>
+    </div>
+    
+    <div id="about" class="section">
+        <h2>About</h2>
+        <p>Welcome to my personal webpage! My name is William Patric Poston. I am a senior at Old Dominion University majoring in computer science and minoring in data science.</p>
+    </div>
+    
+    <div id="resume" class="section" style="display:none;">
         <h2>Resume</h2>
-        <div class="resume">
-            <div class="resume-item">
-                <h3>Education</h3>
-                <p>Old Dominion University, B.Sc. in Computer Science, Minor in Data Science</p>
-            </div>
-            <div class="resume-item">
-                <h3>Experience</h3>
-                <p>Details about professional or academic experiences...</p>
-            </div>
-            <div class="resume-item">
-                <h3>Skills</h3>
-                <ul class="skills-list">
-                    <li>Java</li>
-                    <li>Python</li>
-                    <li>C++</li>
-                    <li>JavaScript</li>
-                    <li>HTML & CSS</li>
-                    <li>SQL</li>
-                    <li>Data Analysis</li>
-                    <li>Machine Learning</li>
-                    <li>Git & GitHub</li>
-                    <li>Problem Solving</li>
-                </ul>
-            </div>
+        <p>Here you can find my resume and professional experiences.</p>
+    </div>
+    
+    <div id="projects" class="section" style="display:none;">
+        <h2>Projects</h2>
+        <button onclick="openSlidingPuzzle()">Play Sliding Puzzle Game</button>
+        <div id="slidingPuzzle" style="display:none;">
+            <!-- Sliding puzzle game will be embedded here -->
         </div>
-        <p>You can view my resume <a href="https://github.com/Willpatpost/Willpatpost/blob/dbf1303492b359898787f3448d01c385b5b2799d/Resume/Current%20Resume/William%20Poston%20Resume.pdf" target="_blank">here</a>.</p>
-    </section>
-
-    <section id="contact" class="section">
+    </div>
+    
+    <div id="contact" class="section" style="display:none;">
         <h2>Contact</h2>
-        <p>If you'd like to get in touch, feel free to reach out via email or connect with me on LinkedIn.</p>
-        <p>Email: <a href="mailto:willpatpost@gmail.com">willpatpost@gmail.com</a></p>
-        <p>Phone: (757) 633-9689</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/william-poston" target="_blank">William Poston LinkedIn</a></p>
-        <p>GitHub: <a href="https://github.com/Willpatpost" target="_blank">William Poston GitHub</a></p>
-        <p>Instagram: <a href="https://www.instagram.com/willlpatpost/" target="_blank">William Poston Instagram</a></p>
-        <p>Facebook: <a href="https://www.facebook.com/william.poston.3363" target="_blank">William Poston Facebook</a></p>
-        <p>X: <a href="https://x.com/Willpatpost" target="_blank">William Poston X</a></p>
-        <p>YouTube: <a href="https://www.youtube.com/channel/UCaZG-RuCnBDYka4JEtVXBhQ" target="_blank">William Poston YouTube</a></p>
-    </section>
-</div>
-
-<footer>
-    <p>&copy; 2024 William Patric Poston</p>
-</footer>
-
-<script src="script.js"></script>
-
+        <p>Get in touch with me through the following channels.</p>
+    </div>
+    
+    <script src="scripts.js"></script>
 </body>
 </html>
