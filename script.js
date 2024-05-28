@@ -1,15 +1,15 @@
 let size, puzzle, timer, moveCounter, time, moves, interval;
 
 document.addEventListener("DOMContentLoaded", function() {
-    openSection('about'); // Automatically open the About section on load
+    toggleSection('about'); // Automatically open the About section on load
 });
 
-function openSection(sectionId) {
-    var sections = document.querySelectorAll('.section');
+function toggleSection(sectionId) {
+    var sections = document.querySelectorAll('.container section');
     sections.forEach(function(section) {
-        section.style.display = 'none';
+        section.classList.add('hidden');
     });
-    document.getElementById(sectionId).style.display = 'block';
+    document.getElementById(sectionId).classList.remove('hidden');
 }
 
 function openSlidingPuzzle() {
