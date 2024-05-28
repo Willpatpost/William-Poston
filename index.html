@@ -28,7 +28,22 @@
         <h2>Projects</h2>
         <button onclick="openSlidingPuzzle()">Play Sliding Puzzle Game</button>
         <div id="slidingPuzzle" style="display:none;">
-            <!-- Sliding puzzle game will be embedded here -->
+            <h3>Sliding Puzzle Game</h3>
+            <label for="size">Select Puzzle Size:</label>
+            <select id="size">
+                <option value="3">3x3</option>
+                <option value="4">4x4</option>
+                <option value="5">5x5</option>
+                <option value="6">6x6</option>
+                <option value="7">7x7</option>
+            </select>
+            <button onclick="startGame()">Play</button>
+            <div id="gameStats">
+                <p>Time: <span id="timer">0</span> seconds</p>
+                <p>Moves: <span id="moveCounter">0</span></p>
+            </div>
+            <div id="puzzleContainer"></div>
+            <p id="congratulationsMessage" style="display:none;">Congratulations! You finished the puzzle.</p>
         </div>
     </div>
     
@@ -38,5 +53,6 @@
     </div>
     
     <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
