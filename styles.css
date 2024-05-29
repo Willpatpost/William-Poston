@@ -4,17 +4,14 @@ body {
     padding: 0;
     background: linear-gradient(to right, #f8ffae, #43c6ac);
     color: #333;
-    padding-bottom: 100px; /* Ensure space for footer */
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 100vh; /* Changed to full viewport height */
 }
 
 header {
     text-align: center;
     padding: 20px;
-    position: sticky;
-    top: 0;
     background-color: #333;
     color: white;
     z-index: 1000;
@@ -36,7 +33,7 @@ nav {
     padding: 10px 0;
     background-color: #333;
     position: sticky;
-    top: 60px; /* Adjusted to the height of the header */
+    top: 84px; /* Adjusted to below header text */
     z-index: 1000;
 }
 
@@ -94,6 +91,28 @@ nav button:hover {
     margin-bottom: 40px;
 }
 
+.dropdown-btn {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    text-align: left;
+    width: 100%;
+    font-size: 18px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+}
+
+.dropdown-btn:hover {
+    background-color: #575757;
+}
+
+.dropdown-container {
+    display: none;
+    padding: 0 18px;
+    overflow: hidden;
+}
+
 .project-images {
     display: flex;
     justify-content: center;
@@ -102,8 +121,15 @@ nav button:hover {
 }
 
 .project-images img {
-    width: 37.5%; /* Reduced size by 50% */
+    width: 22.5%; /* Reduced size by another 40% */
     border-radius: 10px;
+}
+
+.project-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .project-links button,
@@ -138,6 +164,7 @@ nav button:hover {
     background-color: #2eb82e;
 }
 
+/* Ensure the footer stays at the bottom */
 footer {
     text-align: center;
     padding: 10px 0;
@@ -145,9 +172,7 @@ footer {
     color: white;
     width: 100%;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    bottom: 0;
-    left: 0;
+    margin-top: auto;
 }
 
 #puzzleContainer {
