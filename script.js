@@ -149,5 +149,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function toggleDropdown(projectId) {
     var container = document.getElementById(projectId);
-    container.classList.toggle('hidden');
+    if (container) {
+        container.classList.toggle('hidden');
+    } else {
+        console.error('Project container not found:', projectId);
+    }
 }
