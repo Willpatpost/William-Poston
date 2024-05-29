@@ -16,10 +16,10 @@
 </header>
 
 <nav id="navbar">
-    <button onclick="toggleSection('about')">About Me</button>
-    <button onclick="toggleSection('projects')">Projects</button>
-    <button onclick="toggleSection('resume')">Resume</button>
-    <button onclick="toggleSection('contact')">Contact</button>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
 </nav>
 
 <div class="container">
@@ -52,18 +52,18 @@
                 </div>
             </div>
         </div>
-    <div class="project">
-        <button class="dropdown-btn" onclick="toggleDropdown('project2')">Project 2</button>
-        <div id="project3" class="dropdown-container hidden">
-            <!-- Project 3 content -->
+        <div class="project">
+            <button class="dropdown-btn" onclick="toggleDropdown('project2')">Project 2</button>
+            <div id="project2" class="dropdown-container hidden">
+                <!-- Project 2 content -->
+            </div>
         </div>
-    </div>
-    <div class="project">
-        <button class="dropdown-btn" onclick="toggleDropdown('project3')">Project 3</button>
-        <div id="project3" class="dropdown-container hidden">
-            <!-- Project 3 content -->
+        <div class="project">
+            <button class="dropdown-btn" onclick="toggleDropdown('project3')">Project 3</button>
+            <div id="project3" class="dropdown-container hidden">
+                <!-- Project 3 content -->
+            </div>
         </div>
-    </div>
     </section>
     
     <section id="resume" class="hidden">
@@ -135,7 +135,7 @@
         
     </section>
 
-    <div id="popup" class="popup">
+<div id="popup" class="popup">
         <div class="popup-content">
             <span class="close" onclick="closeSlidingPuzzle()">&times;</span>
             <h2>Sliding Puzzle Game by William Poston</h2>
