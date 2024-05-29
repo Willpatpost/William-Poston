@@ -33,7 +33,7 @@ nav#navbar {
     padding: 10px 0;
     background-color: #333;
     position: sticky;
-    top: 60px; /* Adjusted to flush with the bottom of the header */
+    top: 68px; /* Adjusted to flush with the bottom of the header text */
     z-index: 1000;
 }
 
