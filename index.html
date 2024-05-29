@@ -39,20 +39,33 @@
     <section id="projects" class="hidden">
         <h2>Projects</h2>
         <div class="project">
-            <h3>Sliding Puzzle Game</h3>
-            <p>My first personal project is a sliding puzzle game. The goal is to move each tile into its correct position in ascending order from left-to-right and top-to-bottom. This project helped me improve my problem-solving skills and learn more about Java Swing for GUI development.</p>
-            <div class="project-images">
-                <img src="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Demo%20of%20Sliding%20Puzzle%20Uncompleted.png?raw=true" alt="Sliding Puzzle Game Uncompleted">
-                <img src="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Demo%20of%20Sliding%20Puzzle%20Completed.png?raw=true" alt="Sliding Puzzle Game Completed">
+            <button class="dropdown-btn" onclick="toggleDropdown('project1')">Project 1: Sliding Puzzle Game</button>
+            <div id="project1" class="dropdown-container hidden">
+                <div class="project-links">
+                    <button class="play-button" onclick="openSlidingPuzzle()">Play</button>
+                    <a href="https://github.com/Willpatpost/William-Poston/tree/main/Projects/Sliding%20Puzzle/Code/Main" target="_blank" class="btn">View Source</a>
+                    <a href="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Sliding%20Puzzle.jar" target="_blank" class="btn">Download JAR File</a>
+                </div>
+                <div class="project-images">
+                    <img src="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Demo%20of%20Sliding%20Puzzle%20Uncompleted.png?raw=true" alt="Sliding Puzzle Game Uncompleted">
+                    <img src="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Demo%20of%20Sliding%20Puzzle%20Completed.png?raw=true" alt="Sliding Puzzle Game Completed">
+                </div>
             </div>
-            <div class="project-links">
-                <button class="play-button" onclick="openSlidingPuzzle()">Play</button>
-                <a href="https://github.com/Willpatpost/William-Poston/tree/main/Projects/Sliding%20Puzzle/Code/Main" target="_blank" class="btn">View Source</a>
-                <a href="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Sliding%20Puzzle.jar" target="_blank" class="btn">Download JAR File</a>
+        </div>
+        <div class="project">
+            <button class="dropdown-btn" onclick="toggleDropdown('project2')">Project 2</button>
+            <div id="project2" class="dropdown-container hidden">
+                <!-- Add details for Project 2 here -->
+            </div>
+        </div>
+        <div class="project">
+            <button class="dropdown-btn" onclick="toggleDropdown('project3')">Project 3</button>
+            <div id="project3" class="dropdown-container hidden">
+                <!-- Add details for Project 3 here -->
             </div>
         </div>
     </section>
-
+    
     <section id="resume" class="hidden">
         <h2>Resume</h2>
         <div class="resume">
