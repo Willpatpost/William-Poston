@@ -6,7 +6,7 @@ body {
     color: #333;
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Changed to full viewport height */
+    min-height: 100vh; /* Ensure the body covers the full viewport height */
 }
 
 header {
@@ -28,12 +28,12 @@ header p {
     font-weight: 700;
 }
 
-nav {
+nav#navbar {
     text-align: center;
     padding: 10px 0;
     background-color: #333;
     position: sticky;
-    top: 84px; /* Adjusted to below header text */
+    top: 60px; /* Adjusted to flush with the bottom of the header */
     z-index: 1000;
 }
 
@@ -173,6 +173,8 @@ footer {
     width: 100%;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
     margin-top: auto;
+    position: sticky;
+    bottom: 0;
 }
 
 #puzzleContainer {
