@@ -10,14 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
     toggleSection('about'); // Automatically open the About section on load
 });
 
-function toggleSection(sectionId) {
-    var sections = document.querySelectorAll('.container section');
-    sections.forEach(function(section) {
-        section.classList.add('hidden');
-    });
-    document.getElementById(sectionId).classList.remove('hidden');
-}
-
 function openSlidingPuzzle() {
     document.getElementById('popup').style.display = 'block';
 }
@@ -136,13 +128,29 @@ document.addEventListener("DOMContentLoaded", function() {
             toggleDropdown(projectId);
         });
     });
+
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            toggleSection(anchor.getAttribute('href').substring(1));
+        });
+    });
+    toggleSection('about'); // Automatically open the About section on load
 });
 
 function toggleDropdown(projectId) {
-    var container = document.getElementById(projectId);
+    const container = document.getElementById(projectId);
     if (container) {
         container.classList.toggle('hidden');
     } else {
         console.error('Project container not found:', projectId);
     }
+}
+
+function toggleSection(sectionId) {
+    var sections = document.querySelectorAll('.container section');
+    sections.forEach(function(section) {
+        section.classList.add('hidden');
+    });
+    document.getElementById(sectionId).classList.remove('hidden');
 }
