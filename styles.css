@@ -62,6 +62,12 @@ nav a:hover {
     display: none;
 }
 
+.dropdown-container {
+    display: none;
+    padding: 0 18px;
+    overflow: hidden;
+}
+
 .profile-pic {
     width: 200px;
     height: auto;
