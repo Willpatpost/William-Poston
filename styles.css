@@ -68,6 +68,10 @@ nav a:hover {
     overflow: hidden;
 }
 
+.dropdown-container:not(.hidden) {
+    display: block;
+}
+
 .profile-pic {
     width: 200px;
     height: auto;
