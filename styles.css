@@ -5,6 +5,9 @@ body {
     background: linear-gradient(to right, #f8ffae, #43c6ac);
     color: #333;
     padding-bottom: 100px; /* Ensure space for footer */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 header {
@@ -33,7 +36,7 @@ nav {
     padding: 10px 0;
     background-color: #333;
     position: sticky;
-    top: 60px;
+    top: 60px; /* Adjusted to the height of the header */
     z-index: 1000;
 }
 
@@ -54,6 +57,7 @@ nav button:hover {
 
 .container {
     padding: 20px;
+    flex: 1;
 }
 
 .hidden {
@@ -98,7 +102,7 @@ nav button:hover {
 }
 
 .project-images img {
-    width: 75%;
+    width: 37.5%; /* Reduced size by 50% */
     border-radius: 10px;
 }
 
@@ -114,19 +118,20 @@ nav button:hover {
     transition: background-color 0.3s;
     display: inline-block;
     text-align: center;
+    font-size: 16px; /* Same font size */
+    width: 150px; /* Same width */
 }
 
 .project-links .play-button {
     background-color: #1e90ff;
-    padding: 12.5px 25px; /* Slightly larger than other buttons */
-}
-
-.project-links .play-button:hover {
-    background-color: #1c86ee;
 }
 
 .project-links .btn {
     background-color: #32cd32;
+}
+
+.project-links .play-button:hover {
+    background-color: #1c86ee;
 }
 
 .project-links .btn:hover {
@@ -138,10 +143,11 @@ footer {
     padding: 10px 0;
     background-color: #333;
     color: white;
-    position: sticky;
-    bottom: 0;
     width: 100%;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    bottom: 0;
+    left: 0;
 }
 
 #puzzleContainer {
@@ -263,4 +269,9 @@ button {
         padding: 10px;
         margin: 2px;
     }
+}
+
+/* Play button in the popup */
+.popup-content button {
+    background-color: #1e90ff;
 }
