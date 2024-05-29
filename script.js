@@ -130,15 +130,6 @@ function checkWin() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            toggleSection(anchor.getAttribute('href').substring(1));
-        });
-    });
-    toggleSection('about'); // Automatically open the About section on load
-
-    // Add event listeners for project dropdowns
     document.querySelectorAll('.dropdown-btn').forEach(button => {
         button.addEventListener('click', function() {
             const projectId = this.getAttribute('data-target');
