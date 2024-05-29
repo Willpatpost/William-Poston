@@ -33,11 +33,11 @@ nav#navbar {
     padding: 10px 0;
     background-color: #333;
     position: sticky;
-    top: 68px; /* Adjusted to flush with the bottom of the header text */
+    top: 0; /* Adjusted to flush with the top of the screen */
     z-index: 1000;
 }
 
-nav button {
+nav a {
     background-color: #ff6347;
     border: none;
     color: white;
@@ -45,10 +45,11 @@ nav button {
     cursor: pointer;
     margin: 0 5px;
     border-radius: 5px;
+    text-decoration: none;
     transition: background-color 0.3s;
 }
 
-nav button:hover {
+nav a:hover {
     background-color: #ff4500;
 }
 
@@ -278,7 +279,7 @@ button {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    nav button {
+    nav a {
         padding: 10px;
         margin: 2px;
     }
