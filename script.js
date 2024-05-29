@@ -122,3 +122,12 @@ function checkWin() {
         document.getElementById('congratulationsMessage').style.display = 'block';
     }
 }
+
+function toggleDropdown(projectId) {
+    var container = document.getElementById(projectId);
+    if (container.classList.contains('hidden')) {
+        container.classList.remove('hidden');
+    } else {
+        container.classList.add('hidden');
+    }
+}
