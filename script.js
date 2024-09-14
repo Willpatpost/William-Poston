@@ -1,6 +1,8 @@
+// Variables for puzzle game
 let size, puzzle, timer, moveCounter, time, moves, interval;
 
 document.addEventListener("DOMContentLoaded", function() {
+    // Handle navigation links and section toggling
     document.querySelectorAll('nav a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -8,8 +10,42 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
     toggleSection('about'); // Automatically open the About section on load
+
+    // Handle project dropdown toggle
+    document.querySelectorAll('.dropdown-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            const projectId = this.getAttribute('data-target');
+            toggleDropdown(projectId);
+        });
+    });
+
+    // Apply fade-in effect on page load for header
+    const header = document.querySelector('header');
+    header.classList.add('fade-in');
+
+    // Initialize theme toggle
+    const toggleSwitch = document.querySelector('#theme-switch');
+    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+    if (currentTheme) {
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        if (currentTheme === 'dark') {
+            toggleSwitch.checked = true;
+        }
+    }
+
+    toggleSwitch.addEventListener('change', function(e) {
+        if (e.target.checked) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        }
+    });
 });
 
+// Puzzle game functions
 function openSlidingPuzzle() {
     document.getElementById('popup').style.display = 'block';
 }
@@ -121,27 +157,11 @@ function checkWin() {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll('.dropdown-btn').forEach(button => {
-        button.addEventListener('click', function() {
-            const projectId = this.getAttribute('data-target');
-            toggleDropdown(projectId);
-        });
-    });
-
-    document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            toggleSection(anchor.getAttribute('href').substring(1));
-        });
-    });
-    toggleSection('about'); // Automatically open the About section on load
-});
-
+// Dropdown and section toggling functions
 function toggleDropdown(projectId) {
     const container = document.getElementById(projectId);
     if (container) {
-        container.classList.toggle('hidden');
+        container.classList.toggle('open');
     } else {
         console.error('Project container not found:', projectId);
     }
