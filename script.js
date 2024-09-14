@@ -1,34 +1,51 @@
 //Js scripting for puzzle game and day/night toggle
 
-// Handle day/night mode toggle
+// Variables for puzzle game
+let size, puzzle, timer, moveCounter, time, moves, interval;
+
 document.addEventListener("DOMContentLoaded", function() {
-    const toggleSwitch = document.querySelector('#theme-switch');
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', currentTheme);
-    
-    if (currentTheme === 'dark') {
-        toggleSwitch.checked = true;
-    }
-
-    toggleSwitch.addEventListener('change', function() {
-        const theme = toggleSwitch.checked ? 'dark' : 'light';
-        document.documentElement.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
+    // Handle navigation links and section toggling
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            toggleSection(anchor.getAttribute('href').substring(1));
+        });
     });
+    toggleSection('about'); // Automatically open the About section on load
 
-    // Handle dropdown toggle
+    // Handle project dropdown toggle
     document.querySelectorAll('.dropdown-btn').forEach(button => {
         button.addEventListener('click', function() {
             const projectId = this.getAttribute('data-target');
-            const container = document.getElementById(projectId);
-            container.classList.toggle('open');
+            toggleDropdown(projectId);
         });
     });
-});
-// Section toggling (no changes needed)
 
-// Variables for puzzle game
-let size, puzzle, timer, moveCounter, time, moves, interval;
+    // Apply fade-in effect on page load for header
+    const header = document.querySelector('header');
+    header.classList.add('fade-in');
+
+    // Initialize theme toggle
+    const toggleSwitch = document.querySelector('#theme-switch');
+    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+    if (currentTheme) {
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        if (currentTheme === 'dark') {
+            toggleSwitch.checked = true;
+        }
+    }
+
+    toggleSwitch.addEventListener('change', function(e) {
+        if (e.target.checked) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        }
+    });
+});
 
 // Puzzle game functions
 function openSlidingPuzzle() {
