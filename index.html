@@ -27,111 +27,140 @@
 </nav>
 
 <div class="container">
-<section id="about">
-    <h2>About Me</h2>
-    <img src="https://github.com/Willpatpost/William-Poston/blob/main/Senior%20Picture.JPG?raw=true" alt="William Patric Poston's Headshot" class="profile-pic">
-    <p>Hello! My name is William Patric Poston. I am a student at Old Dominion University in Norfolk, Virginia, majoring in computer science and minoring in data science. I am passionate about programming and technology, constantly seeking new challenges to improve my skills.</p>
-    <p>Over the course of my academic journey, I have developed strong problem-solving abilities and a solid foundation in various programming languages, including Java, Python, C++, and JavaScript. My coursework and projects have equipped me with a deep understanding of algorithms, data structures, and software engineering principles.</p>
-    <p>In addition to my technical skills, I am an excellent communicator and team player, capable of collaborating effectively with others to achieve common goals. I have participated in multiple group projects and hackathons, where I honed my ability to work under pressure and deliver high-quality results.</p>
-    <p>I am also committed to continuous learning and professional growth. I regularly attend workshops, webinars, and conferences to stay updated on the latest industry trends and advancements. My dedication to learning and adaptability makes me well-suited to thrive in dynamic and fast-paced environments.</p>
-    <p>A few facts about me:</p>
-    <ul>
-        <li>I love to hike</li>
-        <li>I play soccer</li>
-        <li>I took 5 classes of Spanish in high school</li>
-        <li>I am colorblind</li>
-    </ul>
-</section>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="https://github.com/Willpatpost/William-Poston/blob/main/Senior%20Picture.JPG?raw=true" alt="William Patric Poston's Headshot" class="profile-pic">
+        <p>Hello! My name is William Patric Poston. I am a student at Old Dominion University in Norfolk, Virginia, majoring in computer science and minoring in data science. I am passionate about programming and technology, constantly seeking new challenges to improve my skills.</p>
+        <p>Over the course of my academic journey, I have developed strong problem-solving abilities and a solid foundation in various programming languages, including Java, Python, C++, and JavaScript. My coursework and projects have equipped me with a deep understanding of algorithms, data structures, and software engineering principles.</p>
+        <p>In addition to my technical skills, I am an excellent communicator and team player, capable of collaborating effectively with others to achieve common goals. I have participated in multiple group projects and hackathons, where I honed my ability to work under pressure and deliver high-quality results.</p>
+        <p>I am also committed to continuous learning and professional growth. I regularly attend workshops, webinars, and conferences to stay updated on the latest industry trends and advancements. My dedication to learning and adaptability makes me well-suited to thrive in dynamic and fast-paced environments.</p>
+        <p>A few facts about me:</p>
+        <ul>
+            <li>I love to hike</li>
+            <li>I play soccer</li>
+            <li>I took 5 classes of Spanish in high school</li>
+            <li>I am colorblind</li>
+        </ul>
+    </section>
 
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-        <button class="dropdown-btn" data-target="project1">Sliding Puzzle Game</button>
-        <div id="project1" class="dropdown-container hidden">
-            <div class="project-links">
-                <button class="play-button" onclick="openSlidingPuzzle()">Play</button>
-                <a href="https://github.com/Willpatpost/William-Poston/tree/main/Projects/Sliding%20Puzzle/Code/Main" target="_blank" class="btn">View Source</a>
-                <a href="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Sliding%20Puzzle.jar" target="_blank" class="btn">Download JAR File</a>
+    <!-- Projects Section -->
+    <section id="projects" class="hidden">
+        <h2>Projects</h2>
+        <div class="project">
+            <button class="dropdown-btn" data-target="project1">Sliding Puzzle Game</button>
+            <div id="project1" class="dropdown-container hidden">
+                <div class="project-links">
+                    <button class="play-button" onclick="openSlidingPuzzle()">Play</button>
+                    <a href="https://github.com/Willpatpost/William-Poston/tree/main/Projects/Sliding%20Puzzle/Code/Main" target="_blank" class="btn">View Source</a>
+                    <a href="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Sliding%20Puzzle.jar" target="_blank" class="btn">Download JAR File</a>
+                </div>
+                <div class="project-images">
+                    <img src="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Demo%20of%20Sliding%20Puzzle%20Uncompleted.png?raw=true" alt="Sliding Puzzle Game Uncompleted">
+                    <img src="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Demo%20of%20Sliding%20Puzzle%20Completed.png?raw=true" alt="Sliding Puzzle Game Completed">
+                </div>
             </div>
-            <div class="project-images">
-                <img src="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Demo%20of%20Sliding%20Puzzle%20Uncompleted.png?raw=true" alt="Sliding Puzzle Game Uncompleted">
-                <img src="https://github.com/Willpatpost/William-Poston/blob/main/Projects/Sliding%20Puzzle/Demo/Demo%20of%20Sliding%20Puzzle%20Completed.png?raw=true" alt="Sliding Puzzle Game Completed">
+        </div>
+        <div class="project">
+            <button class="dropdown-btn" data-target="project2">Project 2</button>
+            <div id="project2" class="dropdown-container hidden">
+                <!-- Project 2 content -->
             </div>
         </div>
-    </div>
-    <div class="project">
-        <button class="dropdown-btn" data-target="project2">Project 2</button>
-        <div id="project2" class="dropdown-container hidden">
-            <!-- Project 2 content -->
+        <div class="project">
+            <button class="dropdown-btn" data-target="project3">Project 3</button>
+            <div id="project3" class="dropdown-container hidden">
+                <!-- Project 3 content -->
+            </div>
         </div>
-    </div>
-    <div class="project">
-        <button class="dropdown-btn" data-target="project3">Project 3</button>
-        <div id="project3" class="dropdown-container hidden">
-            <!-- Project 3 content -->
-        </div>
-    </div>
-</section>
+    </section>
 
+    <!-- Popup for Sliding Puzzle Game -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeSlidingPuzzle()">&times;</span>
+            <h2>Sliding Puzzle Game by William Poston</h2>
+            <label for="size">Select Puzzle Size:</label>
+            <select id="size">
+                <option value="3">3x3</option>
+                <option value="4">4x4</option>
+                <option value="5">5x5</option>
+                <option value="6">6x6</option>
+                <option value="7">7x7</option>
+            </select>
+            <button onclick="startGame()">Play</button>
+            <div id="gameStats">
+                <p>Time: <span id="timer">00:00:00</span></p>
+                <p>Moves: <span id="moveCounter">0</span></p>
+            </div>
+            <div id="puzzleContainer"></div>
+            <p id="congratulationsMessage" style="display:none;">Congratulations! You finished the puzzle.</p>
+        </div>
+    </div>
+
+    <!-- Resume Section -->
     <section id="resume" class="hidden">
-    <h2>Resume</h2>
-    <div class="resume">
-        <div class="resume-item">
-            <h3>Education</h3>
+        <h2>Resume</h2>
+        <div class="resume">
+            <div class="resume-item">
+                <h3>Education</h3>
                 <ul>
                     <li>Old Dominion University, B.Sc. in Computer Science, Minor in Data Science, GPA: 3.55/4.00, Expected Graduation: December 2025</li>
                     <li>Paul D. Camp Community College, A.Sc. in Computer Science, GPA: 3.89/4.00, Graduation: December 2023</li>
                 </ul>
+            </div>
+            <div class="resume-item">
+                <h3>Experience</h3>
+                <ul>
+                    <li><strong>CoVa CCI (Norfolk, VA) Programming Intern</strong> (January 2022 – May 2022)</li>
+                    <p>Developed a subscription-based web extension product to protect and educate users on safe media usage and browsing practices. Placed first in competition and earned stakeholder sponsorship.</p>
+                    <li><strong>NASA (Boulder, CO) LunaSat Team Lead</strong> (June 2022 – May 2023)</li>
+                    <p>Led a team of 10 programmers and engineers to wire and program a LunaSat for the Artemis II launch scheduled in November 2024.</p>
+                </ul>
+            </div>
+            <div class="resume-item">
+                <h3>Skills</h3>
+                <ul class="skills-list">
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>C++</li>
+                    <li>JavaScript</li>
+                    <li>HTML & CSS</li>
+                    <li>SQL</li>
+                    <li>Data Analysis</li>
+                    <li>Machine Learning</li>
+                    <li>MATLAB</li>
+                    <li>Domo</li>
+                    <li>Esri</li>
+                    <li>Minitab</li>
+                    <li>Wolfram Mathematica</li>
+                    <li>Microsoft Office (Excel, Word, PowerPoint)</li>
+                    <li>English, Spanish, Norwegian</li>
+                </ul>
+            </div>
+            <div class="resume-item">
+                <h3>Awards/Achievements</h3>
+                <ul>
+                    <li>Paul D. Camp President’s List x4</li>
+                    <li>Cyber INNOVATE 2022 Winner</li>
+                </ul>
+            </div>
         </div>
-        <div class="resume-item">
-            <h3>Experience</h3>
-            <ul>
-                <li><strong>CoVa CCI (Norfolk, VA) Programming Intern</strong> (January 2022 – May 2022)</li>
-                <p>Developed a subscription-based web extension product to protect and educate users on safe media usage and browsing practices. Placed first in competition and earned stakeholder sponsorship.</p>
-                <li><strong>NASA (Boulder, CO) LunaSat Team Lead</strong> (June 2022 – May 2023)</li>
-                <p>Led a team of 10 programmers and engineers to wire and program a LunaSat for the Artemis II launch scheduled in November 2024.</p>
-            </ul>
-        </div>
-        <div class="resume-item">
-            <h3>Skills</h3>
-            <ul class="skills-list">
-                <li>Java</li>
-                <li>Python</li>
-                <li>C++</li>
-                <li>JavaScript</li>
-                <li>HTML & CSS</li>
-                <li>SQL</li>
-                <li>Data Analysis</li>
-                <li>Machine Learning</li>
-                <li>MATLAB</li>
-                <li>Domo</li>
-                <li>Esri</li>
-                <li>Minitab</li>
-                <li>Wolfram Mathematica</li>
-                <li>Microsoft Office (Excel, Word, PowerPoint)</li>
-                <li>English, Spanish, Norwegian</li>
-            </ul>
-        </div>
-        <div class="resume-item">
-            <h3>Awards/Achievements</h3>
-            <ul>
-                <li>Paul D. Camp President’s List x4</li>
-                <li>Cyber INNOVATE 2022 Winner</li>
-            </ul>
-        </div>
-    </div>
-    <p>You can download my resume <a href="https://github.com/Willpatpost/William-Poston/blob/main/William%20Poston%20Resume%20(1).pdf" target="_blank">here</a>.</p>
-</section>
+        <p>You can download my resume <a href="https://github.com/Willpatpost/William-Poston/blob/main/William%20Poston%20Resume%20(1).pdf" target="_blank">here</a>.</p>
+    </section>
 
-    <section id="contact" class="hidden">
+    <!-- Contact Section -->
+        <section id="contact" class="hidden">
         <h2>Contact</h2>
         <p>If you'd like to get in touch, feel free to reach out via email or connect with me on LinkedIn.</p>
         <p>
             <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/Gmail_logo.png?raw=true" alt="Email" style="width:24px;height:24px;vertical-align:middle;">
             <a href="mailto:willpatpost@gmail.com">Email</a>
         </p>
-        <p><img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/Phone%20image.png?raw=true" alt="Phone" style="width:24px;height:24px;vertical-align:middle;">
-            Phone: (757) 633-9689</p>
+        <p>
+            <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/Phone%20image.png?raw=true" alt="Phone" style="width:24px;height:24px;vertical-align:middle;">
+            Phone: (757) 633-9689
+        </p>
         <p>
             <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/LinkedIn%20Logo.png?raw=true" alt="LinkedIn" style="width:24px;height:24px;vertical-align:middle;">
             <a href="https://www.linkedin.com/in/william-poston" target="_blank">LinkedIn</a>
@@ -156,30 +185,7 @@
             <img src="https://github.com/Willpatpost/William-Poston/blob/main/Images/For%20Webpage/Logos/YouTube_Logo.png?raw=true" alt="YouTube" style="width:72px;height:24px;vertical-align:middle;">
             <a href="https://www.youtube.com/channel/UCaZG-RuCnBDYka4JEtVXBhQ" target="_blank">YouTube</a>
         </p>
-        
     </section>
-
-<div id="popup" class="popup">
-        <div class="popup-content">
-            <span class="close" onclick="closeSlidingPuzzle()">&times;</span>
-            <h2>Sliding Puzzle Game by William Poston</h2>
-            <label for="size">Select Puzzle Size:</label>
-            <select id="size">
-                <option value="3">3x3</option>
-                <option value="4">4x4</option>
-                <option value="5">5x5</option>
-                <option value="6">6x6</option>
-                <option value="7">7x7</option>
-            </select>
-            <button onclick="startGame()">Play</button>
-            <div id="gameStats">
-                <p>Time: <span id="timer">00:00:00</span></p>
-                <p>Moves: <span id="moveCounter">0</span></p>
-            </div>
-            <div id="puzzleContainer"></div>
-            <p id="congratulationsMessage" style="display:none;">Congratulations! You finished the puzzle.</p>
-        </div>
-    </div>
 </div>
 
 <footer>
