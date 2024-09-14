@@ -90,6 +90,28 @@ nav a:hover {
     display: none;
 }
 
+/* Theme Toggle Switch */
+.theme-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 14px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch input {
+    margin-right: 10px;
+}
+
+/* Ensure header and footer text remains visible */
+header h1, header p, footer p {
+    opacity: 1; /* Ensure visibility */
+    animation: fadeIn 2s forwards;
+}
+
+/* Dropdown animation */
 .dropdown-container {
     max-height: 0;
     overflow: hidden;
@@ -97,7 +119,7 @@ nav a:hover {
 }
 
 .dropdown-container.open {
-    max-height: 1000px; /* Adjust to fit your content */
+    max-height: 1000px;
 }
 
 .profile-pic {
